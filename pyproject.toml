@@ -1,0 +1,29 @@
+[tool.black]
+target-version = ["py38", "py39"]
+color = true
+skip_magic_trailing_comma = true
+exclude = '''
+/(
+    | data
+    | lightning_logs
+    | models
+    # Python
+    | build
+    | dist
+    | \.cache
+    | \.mypy_cache
+    | \.pytest_cache
+    |  __pycache__
+    | .*\.egg-info
+    # Git
+    | \.git
+    | \.github
+)/
+'''
+
+[tool.isort]
+profile = "black"
+known_first_party = ["src"]
+extend_skip = ["data", "conf"]
+skip_gitignore = true
+color_output = true
