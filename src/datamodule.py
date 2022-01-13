@@ -7,8 +7,7 @@ import torchvision.transforms as T
 from einops import rearrange
 from torch.utils.data import DataLoader
 from torchgeo.datamodules.utils import dataset_split
-
-from src.dataset import DFC2022
+from torchgeo.datasets import DFC2022
 
 DEFAULT_AUGS = K.AugmentationSequential(
     K.RandomHorizontalFlip(p=0.5),
@@ -18,6 +17,7 @@ DEFAULT_AUGS = K.AugmentationSequential(
 
 
 class DFC2022DataModule(pl.LightningDataModule):
+    # Stats computed in labeled train set
     dem_min, dem_max = -79.18, 3020.26
     dem_nodata = -99999.0
 
