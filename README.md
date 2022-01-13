@@ -31,7 +31,9 @@ cd outputs && zip -r submission.zip ./
 
 ## Submit
 
-Upload `submission.zip` to the evaluation server [here](https://codalab.lisn.upsaclay.fr/competitions/880#participate-submit_results). This baseline results in a mIoU of `0.1278` on the heldout validation set.
+Upload `submission.zip` to the evaluation server [here](https://codalab.lisn.upsaclay.fr/competitions/880#participate-submit_results). This baseline results in a mIoU of `0.1278` on the heldout validation set and as of 1/12/22 is 3rd place on the leaderboard.
+
+<img src="./assets/score.png" width="200px"></img>
 
 ## Checkpoints
 
